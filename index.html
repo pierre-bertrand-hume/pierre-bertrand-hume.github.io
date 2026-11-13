@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pierre Bertrand — AMSE, Aix-Marseille Université</title>
+<meta name="description" content="Pierre Bertrand, maître de conférences à Aix-Marseille Université (AMSE). Couplages, entropie, divergences, optimisation stochastique.">
+<link rel="stylesheet" href="style.css">
+<script>
+  // Langue : choix mémorisé, sinon langue du navigateur.
+  (function () {
+    var l = null;
+    try { l = localStorage.getItem("lang"); } catch (e) {}
+    if (l !== "fr" && l !== "en") l = (navigator.language || "fr").slice(0, 2) === "fr" ? "fr" : "en";
+    document.documentElement.setAttribute("data-lang", l);
+    document.documentElement.lang = l;
+  })();
+</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#accueil">Pierre Bertrand</a>
+    <nav>
+      <a href="#recherche"><span class="fr">Recherche</span><span class="en">Research</span></a>
+      <a href="#enseignement"><span class="fr">Enseignement</span><span class="en">Teaching</span></a>
+      <a href="#responsabilites"><span class="fr">Université</span><span class="en">University</span></a>
+      <a href="#contact">Contact</a>
+      <button id="lang" type="button" aria-label="Changer de langue / Switch language">
+        <span class="fr">EN</span><span class="en">FR</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- ───────── Accueil ───────── -->
+<section id="accueil" class="hero">
+  <div class="photo"><img src="assets/photo.jpg" alt="Pierre Bertrand" width="1200" height="1600"></div>
+  <div>
+    <h1>Pierre Bertrand</h1>
+    <p class="role">
+      <span class="fr">Maître de conférences en mathématiques appliquées (section CNU 26)<br>Aix-Marseille School of Economics (AMSE) · Faculté d'économie et de gestion, Aix-Marseille Université</span>
+      <span class="en">Assistant Professor (Maître de conférences) in applied mathematics (CNU section 26)<br>Aix-Marseille School of Economics (AMSE) · Faculty of Economics and Management, Aix-Marseille University</span>
+    </p>
+
+    <div class="fr">
+      <p>Je suis maître de conférences à Aix-Marseille Université depuis 2024, membre de l'AMSE. Mes travaux portent sur les couplages de lois de probabilité sous contraintes de marges, la maximisation d'entropie, les divergences statistiques et l'optimisation stochastique en grande dimension.</p>
+      <p>J'ai soutenu ma thèse en 2021 au LPSM (Sorbonne Université), sous la direction de Michel Broniatowski et Jean-François Marcotorchino, sur le <em>couplage d'indétermination</em>. Ancien élève de l'ENS Cachan, ingénieur des Mines de Paris et agrégé de mathématiques, j'ai aussi une dizaine d'années d'expérience de data scientist dans l'industrie, chez Thales puis chez BNP Paribas CIB, jusqu'au rôle de Lead Data Scientist, et j'ai déposé deux brevets en apprentissage automatique.</p>
+    </div>
+    <div class="en">
+      <p>I have been an Assistant Professor at Aix-Marseille University since 2024, and a member of AMSE. My research deals with couplings of probability distributions under marginal constraints, entropy maximization, statistical divergences and stochastic optimization in high dimension.</p>
+      <p>I defended my PhD in 2021 at LPSM (Sorbonne Université), supervised by Michel Broniatowski and Jean-François Marcotorchino, on the <em>indetermination coupling</em>. A former student of ENS Cachan, I hold an engineering degree from Mines de Paris and the French <em>agrégation</em> in mathematics. I also have about ten years of experience as a data scientist in industry, at Thales and then at BNP Paribas CIB, up to the role of Lead Data Scientist, and I filed two machine-learning patents.</p>
+    </div>
+
+    <p class="links">
+      <a href="https://www.amse-aixmarseille.fr/fr/membres/bertrandp"><span class="fr">Page AMSE</span><span class="en">AMSE page</span></a>
+      <a href="https://arxiv.org/search/?searchtype=author&amp;query=Bertrand%2C+Pierre+Jean-Claude+Robert">arXiv</a>
+      <a href="https://hal.science/search/index?q=%22Pierre+Bertrand%22+Broniatowski">HAL</a>
+      <a href="https://scholar.google.com/citations?user=iDFG1zYAAAAJ">Google Scholar</a>
+      <a href="https://orcid.org/0000-0003-0838-8161">ORCID</a>
+      <!-- Ajouter ici le CV PDF -->
+    </p>
+  </div>
+</section>
+
+<!-- ───────── Recherche ───────── -->
+<section id="recherche">
+  <h2><span class="fr">Recherche</span><span class="en">Research</span></h2>
+
+  <h3><span class="fr">Centres d'intérêt</span><span class="en">Interests</span></h3>
+  <ul class="tags">
+    <li><span class="fr">Couplages et transport optimal</span><span class="en">Couplings and optimal transport</span></li>
+    <li><span class="fr">Entropie de Rényi, indétermination</span><span class="en">Rényi entropy, indetermination</span></li>
+    <li><span class="fr">Divergences statistiques</span><span class="en">Statistical divergences</span></li>
+    <li><span class="fr">Critères de clustering, analyse relationnelle</span><span class="en">Clustering criteria, relational analysis</span></li>
+    <li><span class="fr">Optimisation globale stochastique</span><span class="en">Stochastic global optimization</span></li>
+    <li><span class="fr">Apprentissage statistique, compression de réseaux de neurones</span><span class="en">Statistical learning, neural network compression</span></li>
+  </ul>
+
+  <h3><span class="fr">Prépublications</span><span class="en">Preprints</span></h3>
+  <ol class="pubs">
+    <li>
+      <span class="t">Maximizing Rényi Entropy over the Transportation Polytope: Structure and Algorithm</span>
+      <span class="a">P. Bertrand</span>
+      <span class="v"><span class="fr">Soumis à</span><span class="en">Submitted to</span> <em>Journal of Optimization Theory and Applications</em>, 2026</span>
+      <span class="l"><a href="https://arxiv.org/abs/2601.09347">arXiv</a><a href="https://hal.science/hal-05457049">HAL</a></span>
+    </li>
+    <li>
+      <span class="t">Elementwise Adaptive Random Search for High-Dimensional Constrained Continuous Global Optimization</span>
+      <span class="a">P. Bertrand, M. Broniatowski, W. Stummer</span>
+      <span class="v"><span class="fr">Soumis à</span><span class="en">Submitted to</span> <em>Journal of Global Optimization</em>, 2026</span>
+      <span class="l"><a href="https://arxiv.org/abs/2503.23864">arXiv</a><a href="https://hal.science/hal-05010725">HAL</a></span>
+    </li>
+    <li>
+      <span class="t">Continuous indetermination and average likelihood minimization</span>
+      <span class="a">P. Bertrand, M. Broniatowski, J.-F. Marcotorchino</span>
+      <span class="v">2021</span>
+      <span class="l"><a href="https://arxiv.org/abs/2105.01348">arXiv</a><a href="https://hal.science/hal-03215096">HAL</a></span>
+    </li>
+  </ol>
+
+  <h3>Publications</h3>
+  <ol class="pubs">
+    <li>
+      <span class="t">Some smooth divergences for ℓ<sub>1</sub>-approximations</span>
+      <span class="a">P. Bertrand, W. Stummer</span>
+      <span class="v"><em>Geometric Science of Information (GSI 2025)</em>, Lecture Notes in Computer Science 16033, 359–368, 2025</span>
+      <span class="l"><a href="https://doi.org/10.1007/978-3-032-03918-7_37">DOI</a><a href="https://arxiv.org/abs/2511.00219">arXiv</a><a href="https://hal.science/hal-05142505">HAL</a></span>
+    </li>
+    <li>
+      <span class="t">Independence versus Indetermination: basis of two canonical clustering criteria</span>
+      <span class="a">P. Bertrand, M. Broniatowski, J.-F. Marcotorchino</span>
+      <span class="v"><em>Advances in Data Analysis and Classification</em> 16(4), 2022</span>
+      <span class="l"><a href="https://doi.org/10.1007/s11634-021-00484-1">DOI</a><a href="https://arxiv.org/abs/2007.08820">arXiv</a><a href="https://hal.science/hal-02901167">HAL</a></span>
+    </li>
+    <li>
+      <span class="t">Minimization with respect to divergences and applications</span>
+      <span class="a">P. Bertrand, M. Broniatowski, J.-F. Marcotorchino</span>
+      <span class="v"><em>Geometric Science of Information (GSI 2021)</em>, 2021</span>
+    </li>
+    <li>
+      <span class="t">Extracting future crime indicators from social media</span>
+      <span class="a">T. Delavallade, P. Bertrand, V. Thouvenot</span>
+      <span class="v"><em>Factors Driving Future Crime</em>, Springer, 2016</span>
+    </li>
+    <li>
+      <span class="t">The 1-2-3-Toolkit for Building Your Own Balls-into-Bins Algorithm</span>
+      <span class="a">P. Bertrand, C. Lenzen</span>
+      <span class="v"><em>ALENEX 2015</em> ; <span class="fr">annonce courte à</span><span class="en">brief announcement at</span> <em>DISC 2014</em></span>
+      <span class="l"><a href="https://arxiv.org/abs/1407.8433">arXiv</a></span>
+    </li>
+  </ol>
+
+  <h3><span class="fr">Exposés</span><span class="en">Talks</span></h3>
+  <ul class="plain">
+    <li>Geometric Science of Information (GSI), <span class="fr">octobre 2025</span><span class="en">October 2025</span></li>
+    <li>Journées de Probabilités, <span class="fr">juillet 2025</span><span class="en">July 2025</span></li>
+    <li>Spark Summit East, 2016</li>
+    <li>ALENEX, 2015</li>
+  </ul>
+
+  <h3><span class="fr">Relecture d'articles</span><span class="en">Refereeing</span></h3>
+  <ul class="plain">
+    <li><em>Geometric Science of Information</em> (2025)</li>
+    <li><em>Advances in Data Analysis and Classification</em> (2021)</li>
+  </ul>
+
+  <h3><span class="fr">Thèse</span><span class="en">PhD thesis</span></h3>
+  <p>
+    <span class="fr"><em>Propriétés, applications et extension du couplage d'indétermination</em>, Sorbonne Université (LPSM), 2021. Direction : Michel Broniatowski et Jean-François Marcotorchino.</span>
+    <span class="en"><em>Properties, applications and extension of the indetermination coupling</em> (in French), Sorbonne Université (LPSM), 2021. Advisors: Michel Broniatowski and Jean-François Marcotorchino.</span>
+  </p>
+
+  <h3><span class="fr">Brevets</span><span class="en">Patents</span></h3>
+  <ul class="plain">
+    <li><span class="fr">Reconnaissance d'empreintes digitales par apprentissage profond (Thales, 2017)</span><span class="en">Fingerprint recognition with deep learning (Thales, 2017)</span></li>
+    <li><span class="fr">Système de surveillance d'une installation industrielle (Thales, 2016)</span><span class="en">Monitoring system for an industrial facility (Thales, 2016)</span></li>
+  </ul>
+</section>
+
+<!-- ───────── Enseignement ───────── -->
+<section id="enseignement">
+  <h2><span class="fr">Enseignement</span><span class="en">Teaching</span></h2>
+
+  <h3><span class="fr">Faculté d'économie et de gestion, Aix-Marseille Université (depuis 2024)</span><span class="en">Faculty of Economics and Management, Aix-Marseille University (since 2024)</span></h3>
+  <ul class="courses">
+    <li>
+      <b><span class="fr">Mathématiques 1</span><span class="en">Mathematics 1</span></b> <i>L1</i>
+      <span class="fr">Cours magistral (24 h), environ 200 étudiants.</span>
+      <span class="en">Lectures (24 h), about 200 students.</span>
+    </li>
+    <li>
+      <b><span class="fr">Statistiques inférentielles</span><span class="en">Inferential statistics</span></b> <i>L2</i>
+      <span class="fr">Cours magistral (30 h), environ 200 étudiants. Estimation, tests statistiques.</span>
+      <span class="en">Lectures (30 h), about 200 students. Estimation, hypothesis testing.</span>
+    </li>
+    <li>
+      <b><span class="fr">Mathématiques appliquées</span><span class="en">Applied mathematics</span></b> <i>M1</i>
+      <span class="fr">Travaux dirigés (60 h). Optimisation sous contraintes (KKT), systèmes dynamiques et portraits de phase.</span>
+      <span class="en">Tutorials (60 h). Constrained optimization (KKT), dynamical systems and phase portraits.</span>
+    </li>
+  </ul>
+
+  <h3><span class="fr">Auparavant</span><span class="en">Previously</span></h3>
+  <ul class="courses">
+    <li>
+      <b><span class="fr">Data science pour l'actuariat</span><span class="en">Data science for actuaries</span></b> <i>2017–2024</i>
+      <span class="fr">Institut des Actuaires, Paris. Apprentissage automatique, apprentissage profond, Transformers ; travaux pratiques sur texte et images.</span>
+      <span class="en">Institut des Actuaires, Paris. Machine learning, deep learning, Transformers; hands-on sessions on text and images.</span>
+    </li>
+    <li>
+      <b><span class="fr">Interrogations orales en MP</span><span class="en">Oral examinations (<em>colles</em>), MP class</span></b> <i>2013–2015</i>
+      <span class="fr">Lycée Hoche, Versailles.</span>
+      <span class="en">Lycée Hoche, Versailles.</span>
+    </li>
+  </ul>
+</section>
+
+<!-- ───────── Responsabilités ───────── -->
+<section id="responsabilites">
+  <h2><span class="fr">Vie de l'université</span><span class="en">University life</span></h2>
+  <p>
+    <span class="fr">En tant que membre de l'université, je prends aussi part à des projets et à des tâches collectives :</span>
+    <span class="en">As a member of the university, I also take part in collective projects and duties:</span>
+  </p>
+  <ul class="plain">
+    <li><span class="fr">Analyse des flux d'étudiants de la Faculté d'économie et de gestion : outil de visualisation interactive des parcours et de la réussite depuis 2012, à partir des données d'inscription anonymisées</span><span class="en">Student flow analysis for the Faculty of Economics and Management: interactive visualization tool of student pathways and success rates since 2012, built on anonymized enrolment data</span></li>
+    <li><span class="fr">Membre du jury de L2</span><span class="en">Member of the second-year (L2) examination board</span></li>
+    <li><span class="fr">Rapporteur de mémoires de master</span><span class="en">Examiner of master's theses</span></li>
+    <li><span class="fr">Tuteur référent d'étudiants en apprentissage</span><span class="en">Academic tutor for apprenticeship students</span></li>
+    <li><span class="fr">Président de jury du baccalauréat, session 2026</span><span class="en">Chair of a <em>baccalauréat</em> examination board, 2026</span></li>  </ul>
+</section>
+
+<!-- ───────── Contact ───────── -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>
+    <a id="mail" href="#contact">pierre.bertrand.1 [at] univ-amu.fr</a><br>
+    AMU – AMSE, 5-9 boulevard Maurice Bourdet, CS 50498<br>
+    13205 Marseille Cedex 1, France
+  </p>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <span>© Pierre Bertrand</span>
+  <span><span class="fr">Mise à jour : novembre 2026</span><span class="en">Last updated: November 2026</span></span>
+</footer>
+
+<script>
+  document.getElementById("lang").addEventListener("click", function () {
+    var h = document.documentElement;
+    var l = h.getAttribute("data-lang") === "fr" ? "en" : "fr";
+    h.setAttribute("data-lang", l);
+    h.lang = l;
+    try { localStorage.setItem("lang", l); } catch (e) {}
+  });
+  // Adresse reconstituée au clic, pour limiter le spam.
+  document.getElementById("mail").addEventListener("click", function (e) {
+    e.preventDefault();
+    location.href = "mailto:" + ["pierre.bertrand.1", "univ-amu.fr"].join("@");
+  });
+</script>
+</body>
+</html>

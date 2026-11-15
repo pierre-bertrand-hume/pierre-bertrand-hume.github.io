@@ -5,6 +5,7 @@
   --rule: #e2ded5;
   --accent: #1f4e79;
   --tag: #efece4;
+  --gold: #b8975a;
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
@@ -83,7 +84,8 @@ h1 { font-size: 2.3rem; line-height: 1.15; margin: 0 0 .5rem; letter-spacing: -.
 section { padding-bottom: 1rem; }
 h2 {
   font-size: 1.5rem; margin: 3.2rem 0 1rem;
-  padding-bottom: .4rem; border-bottom: 1px solid var(--rule);
+  /* double filet doré, comme sur un dos de Pléiade */
+  padding-bottom: .45rem; border-bottom: 3px double var(--gold);
 }
 h3 {
   font: 600 .8rem var(--sans); letter-spacing: .07em; text-transform: uppercase;
@@ -116,6 +118,70 @@ ul.plain li { margin-bottom: .35rem; }
   font: normal 600 .75rem var(--sans); color: var(--muted);
   border: 1px solid var(--rule); border-radius: 3px;
   padding: .05rem .4rem; margin: 0 .5rem 0 .3rem; white-space: nowrap;
+}
+
+/* Courbes de niveau très pâles derrière la photo et la bio */
+html, body { overflow-x: clip; }
+.hero { position: relative; isolation: isolate; }
+/* Carte centrée sur Massevaques, placée sous la photo : --cx / --cy = position du hameau */
+.hero { --carte: 34rem; --cx: 6.5rem; --cy: 22rem; }
+.topo {
+  position: absolute; z-index: -1; pointer-events: none;
+  left: calc(var(--cx) - var(--carte) / 2); top: calc(var(--cy) - var(--carte) / 2);
+  width: var(--carte); height: var(--carte);
+  opacity: .38;
+  /* le relief s'efface avant le texte, à droite, et avant la rubrique suivante, en bas */
+  -webkit-mask-image: linear-gradient(to left, transparent 30%, rgba(0,0,0,.3) 42%, #000 56%), linear-gradient(to bottom, #000 68%, transparent 92%);
+          mask-image: linear-gradient(to left, transparent 30%, rgba(0,0,0,.3) 42%, #000 56%), linear-gradient(to bottom, #000 68%, transparent 92%);
+  -webkit-mask-composite: source-in; mask-composite: intersect;
+}
+/* Massevaques : une petite maison au centre de la carte */
+.maison {
+  position: absolute; z-index: -1; pointer-events: none;
+  width: 16px; height: 16px;
+  left: calc(var(--cx) - 8px); top: calc(var(--cy) - 8px);
+  fill: none; stroke: var(--accent); stroke-width: 2; stroke-linejoin: round; opacity: .6;
+}
+/* Sur téléphone : la carte passe à droite de la photo, au-dessus du texte */
+@media (max-width: 640px) {
+  .hero { --carte: 22rem; --cx: 16rem; --cy: 7rem; }
+  .topo {
+    -webkit-mask-image: linear-gradient(to bottom, #000 50%, transparent 72%);
+            mask-image: linear-gradient(to bottom, #000 50%, transparent 72%);
+  }
+}
+
+/* Petit dos de Pléiade devant chaque grand titre : un cuir par rubrique */
+h2::before {
+  content: ""; display: inline-block;
+  width: .65rem; height: 1.3em; margin-right: .65rem; vertical-align: -.22em;
+  border-radius: 1px;
+  background:
+    linear-gradient(var(--gold), var(--gold)) 0 16% / 100% 1.5px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) 0 27% / 100% 1px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) 0 80% / 100% 1.5px no-repeat,
+    var(--cuir, var(--muted));
+}
+#recherche       { --cuir: #8a5a33; }  /* havane */
+#enseignement    { --cuir: #1f6b52; }  /* vert émeraude */
+#responsabilites { --cuir: #2b4a8a; }  /* bleu */
+#contact         { --cuir: #9e3a30; }  /* rouge vénitien */
+
+/* Clins d'œil disséminés dans les titres, volontairement sans légende */
+.clin {
+  float: right; width: 32px; height: 32px;
+  color: var(--accent); opacity: .85;
+  fill: none; stroke: currentColor;
+  stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round;
+}
+.clin.plein { fill: currentColor; stroke: none; }
+h2 .clin { margin-top: -4px; }
+h3 .clin { margin-top: -10px; }
+h3 .clin.plein { color: var(--gold); opacity: 1; }   /* étoiles dorées de la Pléiade */
+/* variante posée dans le texte, juste après le mot concerné */
+.clin.mot {
+  float: none; display: inline-block; width: 1.15em; height: 1.15em;
+  vertical-align: -.2em; margin-left: .25em;
 }
 
 footer {

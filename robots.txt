@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pierre-bertrand-hume.github.io/sitemap.xml

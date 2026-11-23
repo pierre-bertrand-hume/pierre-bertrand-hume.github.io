@@ -198,3 +198,15 @@ footer {
   h1 { font-size: 1.9rem; }
   nav { gap: .8rem; }
 }
+
+/* Lien CV : une feuille coiffée d'une toque de travers, qui se dandine au survol */
+.links .cv { display: inline-flex; align-items: center; gap: .3rem; }
+.cv svg {
+  width: 1.7em; height: 1.7em; margin-top: -.35em;
+  fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;
+  transform-origin: 50% 90%;
+}
+.cv svg .toque { fill: var(--gold); stroke: var(--fg); }
+.cv:hover svg { animation: dandine .6s ease-in-out 2; }
+@keyframes dandine { 0%,100% { transform: rotate(0); } 25% { transform: rotate(-9deg); } 75% { transform: rotate(9deg); } }
+@media (prefers-reduced-motion: reduce) { .cv:hover svg { animation: none; } }
